@@ -19,6 +19,7 @@ echo -e "\nConfiguring firewall...\n"
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
+ufw enable
 
 sed -i.bak 's/ENABLED=no/ENABLED=yes/g' /etc/ufw/ufw.conf
 chmod 0644 /etc/ufw/ufw.conf
